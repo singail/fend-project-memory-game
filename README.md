@@ -2,19 +2,24 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* [About the project](#About the project)
+* [How to play](#How to play)
+* [Resources](#Resources)
 
-## Instructions
+## About the project
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+This project is a part of the Front-End Web Developer Nanodegree Program of Udacity. As a student I received a starter code with HTML and CSS to display a static version of the Memory Game project. My goal was to add functionality and make the game interactive by using JavaScript, some HTML and CSS.
 
-To get started, open `js/app.js` and start building out the app's functionality
+## How to play
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+The purpose of this game is to test players memory. A player is given a deck that contains 8 pairs of matched cards. At the beginning of the game the cards with symbols are turned over. When a player clicks on a card, the symbol is revealed. If a player opens two cards with the same symbol, those cards remain open. The goal is to match all cards. 
 
-## Contributing
+## Resources
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+In order to fulfil project specifications, I used those resources:
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+* Front-End Web Developer Nanodegree Program lessons and forum
+* Developer community https://stackoverflow.com
+* Resources for developers https://developer.mozilla.org/en-US/
+* https://www.w3schools.com/
+* And of course special thanks to Slack buddies who helped me a lot while creating this project!
