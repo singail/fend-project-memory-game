@@ -17,7 +17,8 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    background: #ffffff url('../img/dust_scratches.png');
+    /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
 }
 
@@ -26,6 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 h1 {
@@ -40,7 +42,7 @@ h1 {
 .deck {
     width: 660px;
     min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    background: linear-gradient(160deg, #14e0ce 0%, #67d47a 100%);
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -67,18 +69,23 @@ h1 {
 
 .deck .card.open {
     transform: rotateY(0);
-    background: #02b3e4;
+    background: #9abaf7;
     cursor: default;
 }
 
 .deck .card.show {
-    font-size: 33px;
+    font-size: 40px;
 }
 
 .deck .card.match {
     cursor: default;
-    background: #02ccba;
-    font-size: 33px;
+    background: #7a37b5;
+    font-size: 40px;
+    pointer-events: none;
+}
+
+.deck .card.preventClick {
+    pointer-events: none;
 }
 
 /*
@@ -106,4 +113,46 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+#winnerModal {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    background-color: #2bddb8;
+    width: 660px;
+    height: 30%;
+    border: #19e0ca solid 5px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.results {
+    width: 100%;
+    height: 100%;
+    background: #9abaf7;
+    padding: 20px;
+}
+
+.close {
+    color: black;
+    font-size: 50px;
+    float: right;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+}
+
+.timer {
+    margin-left: 30%;
+}
+
+.congrats {
+    font-weight: 600;
+    font-size: 20px;
+    color: #f6f6f6;
 }
