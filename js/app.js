@@ -19,8 +19,6 @@ let timerStarted = false;
 let time = 0;
 const moves = document.querySelector('.moves');
 const stars = document.querySelector('.stars');
-const star = document.querySelector('li');
-const starIcon = document.getElementsByClassName('fa-star');
 const result = document.querySelector('.results');
 const para = document.createElement('p');
 const winner = document.getElementById('winnerModal');
@@ -39,7 +37,7 @@ const lastStar = stars.lastElementChild;
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length,
+    let currentIndex = array.length,
         temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
@@ -60,13 +58,13 @@ function gameStart() {
 
     for (let i = 0; i < cardsArray.length; i++) {
         deck.innerHTML = '';
-    [].forEach.call(cardsArray, function (addCards) {
+        [].forEach.call(cardsArray, function (addCards) {
             deck.appendChild(addCards);
         });
         for (let j = 0; j < cardsArray.length; j++) {
             cardsArray[j].classList.remove('open', 'show', 'match');
         }
-    };
+    }
 }
 
 
@@ -88,19 +86,19 @@ deck.addEventListener('click', function (event) {
         event.target.classList.add('open', 'show', 'preventClick');
         openCards.push(event.target);
         if (timerStarted === false) {
-            startTimer()
+            startTimer();
         }
 
         if (openCards.length === 2) {
-            countingMoves()
+            countingMoves();
         }
 
         if ((openCards.length === 2) && (openCards[0].innerHTML !== openCards[1].innerHTML)) {
-            notMatch()
+            notMatch();
 
         } else if ((openCards.length === 2) && (openCards[0].innerHTML == openCards[1].innerHTML)) {
 
-            match()
+            match();
         }
     }
 });
@@ -109,7 +107,7 @@ deck.addEventListener('click', function (event) {
 function countingMoves() {
     countMoves += 1;
     moves.textContent = countMoves;
-    starRating()
+    starRating();
 }
 
 let starsNumber = 3;
@@ -139,7 +137,7 @@ function match() {
     openCards[1].classList.add('match');
     matchedCards.push(openCards);
     openCards = [];
-    win()
+    win();
 }
 
 //When two cards don't match
@@ -154,7 +152,7 @@ function notMatch() {
 //Checks if all the cards are matched
 function win() {
     if (matchedCards.length === 8) {
-        countResults()
+        countResults();
         clearInterval(timer);
         winner.style.display = 'block';
     }
@@ -178,7 +176,7 @@ function restartGame() {
     time = 0;
     matchedCards.length = 0;
     openCards = [];
-    gameStart()
+    gameStart();
 }
 
 const newSpan = document.createElement('span');
