@@ -26,6 +26,7 @@ const restart = document.querySelector('.restart');
 const close = document.querySelector('.close');
 const firstStar = stars.firstElementChild;
 const lastStar = stars.lastElementChild;
+const button = document.querySelector('.playAgain');
 
 
 
@@ -160,6 +161,7 @@ function win() {
 
 //Start the game over after restart icon is clicked
 restart.addEventListener('click', restartGame);
+button.addEventListener('click', restartGame);
 
 function restartGame() {
     lastStar.style.display = 'inline-block';

@@ -156,3 +156,23 @@ p {
     font-size: 20px;
     color: #f6f6f6;
 }
+
+.playAgain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    background-color: #7a37b5;
+    color: white;
+    font-size: 15px;
+    border: #19e0ca solid 2px;
+    box-shadow: 6px 4px 9px 1px rgba(46, 61, 73, 0.5);
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
