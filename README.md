@@ -8,6 +8,10 @@ This project is a part of the Front-End Web Developer Nanodegree Program of Udac
 
 The purpose of this game is to test players memory. A player is given a deck that contains 8 pairs of matched cards. At the beginning of the game the cards with symbols are turned over. When a player clicks on a card, the symbol is revealed. If a player opens two cards with the same symbol, those cards remain open. The goal is to match all cards. 
 
+## Live version
+
+Follow this link to play the game: [Memory game](https://singail.github.io/fend-project-memory-game/)
+
 ## Resources
 
 In order to fulfil project specifications, I used those resources:
